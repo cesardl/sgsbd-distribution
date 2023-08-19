@@ -1,6 +1,6 @@
 package org.sanmarcux.samples.mysql.data.repositories;
 
-import org.sanmarcux.samples.mysql.data.entities.Distribution;
+import org.sanmarcux.samples.mysql.data.entities.DistributionEntity;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -8,5 +8,7 @@ import org.springframework.data.repository.CrudRepository;
  *
  * @author Cesardl
  */
-public interface DistributionRepository extends CrudRepository<Distribution, Integer> {
+public interface DistributionRepository extends CrudRepository<DistributionEntity, Integer> {
+
+    DistributionEntity findByCost(String filterCost);
 }

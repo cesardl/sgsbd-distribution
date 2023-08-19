@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Table(name = "sgs_distribucion")
 @Data
 @ToString
-public class Distribution {
+public class DistributionEntity {
 
     @Id
     @Column(name = "sgs_parcela_n_parcela_id")

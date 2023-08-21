@@ -8,6 +8,7 @@ import org.sanmarcux.samples.mysql.data.repositories.ParcelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Collection;
 import java.util.stream.StreamSupport;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,10 +32,10 @@ class SgsbdDistributionApplicationTests {
 
     @Test
     void allParcels() {
-        Iterable<ParcelEntity> result = parcelRepository.findAll();
+        Collection<ParcelEntity> result = parcelRepository.findAllActiveParcels();
 
-        long size = StreamSupport.stream(result.spliterator(), false).count();
+        long size = result.size();
 
-        assertEquals(3, size);
+        assertEquals(2, size);
     }
 }

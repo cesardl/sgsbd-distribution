@@ -6,6 +6,7 @@ import org.sanmarcux.samples.mysql.web.models.Parcel;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -24,10 +25,8 @@ public class ParcelService {
 
     public List<Parcel> getAll() {
         List<Parcel> parcels = new ArrayList<>();
-        Iterable<ParcelEntity> all = parcelRepository.findAll();
-        all.forEach(entity -> {
-            parcels.add(this.translateDbToWeb(entity));
-        });
+        Collection<ParcelEntity> all = parcelRepository.findAllActiveParcels();
+        all.forEach(entity -> parcels.add(this.translateDbToWeb(entity)));
         return parcels;
     }
 

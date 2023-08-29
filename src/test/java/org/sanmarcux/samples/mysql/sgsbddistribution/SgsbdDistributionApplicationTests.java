@@ -36,6 +36,6 @@ class SgsbdDistributionApplicationTests {
 
         long size = result.size();
 
-        assertEquals(2, size);
+        assertEquals(4, size);
     }
 }

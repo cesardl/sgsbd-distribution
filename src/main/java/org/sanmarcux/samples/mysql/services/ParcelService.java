@@ -32,7 +32,7 @@ public class ParcelService {
 
     private Parcel translateDbToWeb(ParcelEntity entity) {
         Parcel parcel = new Parcel();
-        parcel.setId(entity.getId());
+        parcel.setParcelId(entity.getId());
         parcel.setDescription(entity.getDescription());
         parcel.setStatus(entity.getStatus());
         return parcel;

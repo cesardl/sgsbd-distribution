@@ -59,7 +59,7 @@ public class DistributionService {
 
     private DistributionEntity translateWebToDb(Distribution distribution) {
         DistributionEntity entity = new DistributionEntity();
-        entity.setId(distribution.getId());
+        entity.setId(distribution.getDistributionId());
         entity.setProduction(distribution.getProduction());
         entity.setCost(distribution.getCost());
         return entity;
@@ -67,7 +67,7 @@ public class DistributionService {
 
     private Distribution translateDbToWeb(DistributionEntity entity) {
         Distribution distribution = new Distribution();
-        distribution.setId(entity.getId());
+        distribution.setDistributionId(entity.getId());
         distribution.setProduction(entity.getProduction());
         distribution.setCost(entity.getCost());
         return distribution;

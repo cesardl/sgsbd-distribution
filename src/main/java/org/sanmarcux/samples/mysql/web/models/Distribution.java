@@ -18,7 +18,7 @@ import lombok.Setter;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Distribution {
 
-    public Integer id;
+    public Integer distributionId;
     public String production;
     public String utility;
     public String cost;

@@ -18,7 +18,7 @@ import lombok.Setter;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Parcel {
 
-    public Integer id;
+    public Integer parcelId;
     public String description;
     public String status;
 }

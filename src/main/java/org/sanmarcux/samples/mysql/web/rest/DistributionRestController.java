@@ -41,7 +41,7 @@ public class DistributionRestController {
 
     @PutMapping("/{id}")
     public Distribution update(@PathVariable("id") int id, @RequestBody Distribution distribution) {
-        if (id != distribution.getId()) {
+        if (id != distribution.getDistributionId()) {
             throw new BadRequestException("Ids do not match");
         }
         return this.distributionService.createOrUpdate(distribution);
